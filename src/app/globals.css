@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@theme inline {
+    --color-background: var(--background);
+    --color-surface: var(--surface);
+    --color-text: var(--text);
+    --color-text-secondary: var(--text-secondary);
+    --color-border: var(--border);
+
+    --font-inter: var(--font-inter);
+    --font-rajdhani: var(--font-rajdhani);
+}
+
+@theme {
+    /* --- breakpoints --- */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1440px;
+
+    /* --- Text Styles --- */
+    --text-h1: 4.5rem;
+    --text-h1--line-height: 1.08;
+    --text-h1--font-weight: 800;
+
+    --text-h1-sm: 3rem;
+    --text-h1-sm--line-height: 1.1;
+    --text-h1-sm--font-weight: 800;
+
+    --text-h2: 2.5rem;
+    --text-h2--line-height: 1.2;
+    --text-h2--font-weight: 800;
+
+    --text-h2-sm: 2rem;
+    --text-h2-sm--line-height: 1.2;
+    --text-h2-sm--font-weight: 700;
+
+    --text-h3: 2rem;
+    --text-h3--line-height: 1.2;
+    --text-h3--font-weight: 700;
+
+    --text-h3-sm: 1.5rem;
+    --text-h3-sm--line-height: 1.25;
+    --text-h3-sm--font-weight: 700;
+
+    --text-h4: 1.25rem;
+    --text-h4--line-height: 1.6;
+    --text-h4--font-weight: 400;
+
+    --text-h4-sm: 1rem;
+    --text-h4-sm--line-height: 1.5;
+    --text-h4-sm--font-weight: 400;
+
+    --text-btn: 0.95rem;
+    --text-btn--line-height: 1.4;
+    --text-btn--font-weight: 600;
+
+    --text-caption: 0.85rem;
+    --text-caption--line-height: 1.4;
+    --text-caption--font-weight: 400;
+
+    --text-subtext: 0.78rem;
+    --text-subtext--line-height: 1.3;
+    --text-subtext--font-weight: 600;
+
+    /* --- Icon Sizes --- */
+    --text-icon-xs: 0.75rem;
+    --text-icon-xs--line-height: 1;
+    --text-icon-sm: 1rem;
+    --text-icon-sm--line-height: 1;
+    --text-icon-md: 1.25rem;
+    --text-icon-md--line-height: 1;
+    --text-icon-lg: 1.5rem;
+    --text-icon-lg--line-height: 1;
+    --text-icon-xl: 2.25rem;
+    --text-icon-xl--line-height: 1;
+
+    /* --- Brand & Action Colors --- */
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-primary-soft: rgba(59, 130, 246, 0.1);
+
+    --color-success: #10b981;
+    --color-success-soft: rgba(16, 185, 129, 0.1);
+
+    --color-danger: #ef4444;
+    --color-danger-soft: rgba(239, 68, 68, 0.1);
+
+    --color-warning: #f59e0b;
+    --color-warning-soft: rgba(245, 158, 11, 0.1);
+
+    --color-overlay: rgba(0, 0, 0, 0.3);
+    --color-inverse-overlay: rgba(255, 255, 255, 0.05);
+
+    /* --- Academic, Team, Chart, And Topic Colors --- */
+    --color-purple: #8b5cf6;
+    --color-purple-soft: rgba(139, 92, 246, 0.15);
+
+    --color-purple-lighter: #a855f7;
+    --color-purple-lighter-soft: rgba(168, 85, 247, 0.15);
+
+    --color-indigo: #4f46e5;
+    --color-indigo-soft: rgba(79, 70, 229, 0.1);
+
+    --color-pink: #ec4899;
+    --color-pink-soft: rgba(236, 72, 153, 0.12);
+
+    --color-orange: #f97316;
+    --color-orange-soft: rgba(249, 115, 22, 0.12);
+
+    --color-teal: #14b8a6;
+    --color-grid: #334155;
+    --color-tooltip-bg: rgba(15, 23, 42, 0.9);
+
+    /* --- Maps, Jobs, Profiles, And Utility Neutrals --- */
+    --color-map-fill-dark: #2a2f3a;
+    --color-map-stroke-dark: #1a1d26;
+    --color-map-hover-dark: #475569;
+    --color-map-base-light: #d1d5db;
+    --color-map-hover-light: #9ca3af;
+    --color-dark-auth-bg: #0f1115;
+    --color-dark-auth-surface: #161920;
+    --color-dark-auth-border: #2a2f3a;
+    --color-dark-auth-text: #f1f5f9;
+    --color-profiles-bg: #0f1012;
+    --color-profiles-surface: #18191c;
+    --color-profiles-input: #25262b;
+    --color-profiles-border: #2d2d32;
+    --color-profiles-card-gradient: linear-gradient(
+        to bottom,
+        #2c2f38,
+        #1a1b1e
+    );
+    --color-profiles-pill-bg: #27272a;
+    --color-profiles-pill-border: #3f3f46;
+    --color-profiles-pill-text: #d4d4d8;
+
+    --color-code-bg: #0d0d12;
+    --color-code-border: #1e1e2d;
+    --color-code-text-accent: #a5b4fc;
+
+    --color-neutral-copy-muted: #666666;
+    --color-pagination-hover: #f2f2f2;
+    --color-manifest-theme: #1a1a2e;
+
+    /* --- Tools Editorial Theme --- */
+    --color-tools-ink: #0f0f0f;
+    --color-tools-paper: #faf9f7;
+    --color-tools-rule: #d8d4ce;
+    --color-tools-accent: #c8521a;
+    --color-tools-ink-dark: #f0ede8;
+    --color-tools-paper-dark: #111010;
+    --color-tools-rule-dark: #2e2b27;
+    --color-tools-accent-dark: #e06c30;
+    --color-tool-category-blue: #1a6cc8;
+    --color-tool-category-green: #2d9d5c;
+    --color-tool-category-purple: #7c6fcd;
+    --color-tool-category-pink: #c05c8a;
+    --color-tool-category-yellow: #c8a21a;
+    --color-tool-category-deep-green: #2d6a4f;
+    --color-tool-category-plum: #5a3a7a;
+
+    /* --- External Brand Colors --- */
+    --color-linkedin: #0077b5;
+    --color-google-scholar: #ea4335;
+    --color-whatsapp: #0caa41;
+    --color-nti: #4caf50;
+}
+
+:root {
+    /* --- Core Dark Mode --- */
+    --background: #050505;
+    --surface: #121212;
+    --text: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border: #2a2a2a;
+}
+
+[data-theme="light"] {
+    --background: #f3f4f6;
+    --surface: #ffffff;
+    --text: #111827;
+    --text-secondary: #6b7280;
+    --border: #e5e7eb;
+}
+
+@layer base {
+    html {
+        @apply scroll-pt-17.5;
+    }
+
+    body {
+        @apply overflow-x-hidden bg-background text-text font-inter;
+    }
+
+    a {
+        @apply text-inherit no-underline;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+}
+
+@utility container {
+    @apply mx-auto w-full max-w-full px-5;
+
+    @variant sm {
+        @apply max-w-160;
+    }
+
+    @variant md {
+        @apply max-w-3xl;
+    }
+
+    @variant lg {
+        @apply max-w-5xl;
+    }
+
+    @variant xl {
+        @apply max-w-300;
+    }
+
+    @variant 2xl {
+        @apply max-w-350;
+    }
+}
