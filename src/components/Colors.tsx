@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "./Button";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Colors() {
   const colors = {
@@ -34,6 +36,29 @@ export default function Colors() {
   };
   return (
     <div className="p-8 space-y-12 bg-background text-foreground">
+      {/* Buttons */}
+      <h2 className="text-3xl font-bold mb-6">Project Buttons Theme Palette</h2>
+      <div className="flex flex-col gap-4">
+        <h3 className="text-xl font-semibold capitalize">Buttons</h3>
+        <div className="flex gap-5">
+          <Button variant="primary">Primary Button</Button>
+          <Button variant="accent">Accent Button</Button>
+          <Button variant="secondary">Secondary Button</Button>
+        </div>
+        <h3 className="text-xl font-semibold capitalize">Buttons with icons</h3>
+        <div className="flex gap-5">
+          <Button variant="primary">
+            Primary Button <FaArrowRight />
+          </Button>
+          <Button variant="accent">
+            Accent Button <FaArrowRight />
+          </Button>
+          <Button variant="secondary">
+            Secondary Button <FaArrowRight />
+          </Button>
+        </div>
+      </div>
+      {/* Colors */}
       <h2 className="text-3xl font-bold mb-6">Project Theme Palette</h2>
       <h3 className="text-xl font-semibold capitalize mb-4">primary Colors</h3>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
