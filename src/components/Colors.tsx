@@ -44,6 +44,7 @@ export default function Colors() {
           <Button variant="primary">Primary Button</Button>
           <Button variant="accent">Accent Button</Button>
           <Button variant="secondary">Secondary Button</Button>
+          <Button variant="danger">Danger Button</Button>
         </div>
         <h3 className="text-xl font-semibold capitalize">Buttons with icons</h3>
         <div className="flex gap-5">
@@ -55,6 +56,9 @@ export default function Colors() {
           </Button>
           <Button variant="secondary">
             Secondary Button <FaArrowRight />
+          </Button>
+          <Button variant="danger">
+            Danger Button <FaArrowRight />
           </Button>
         </div>
       </div>
