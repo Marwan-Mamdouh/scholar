@@ -35,6 +35,14 @@ export default function Colors() {
       { name: "600", class: "bg-accent-600" },
       { name: "700", class: "bg-accent-700" },
     ],
+    danger:[
+      { name: "100", class: "bg-danger-100" },
+      { name: "200", class: "bg-danger-200" },
+      { name: "300", class: "bg-danger-300" },
+      { name: "400", class: "bg-danger-400" },
+      { name: "600", class: "bg-danger-600" },
+      { name: "700", class: "bg-danger-700" },
+    ]
   };
   return (
     <div className="p-8 space-y-12 bg-background text-foreground">
@@ -166,14 +174,19 @@ export default function Colors() {
           </div>
         ))}
       </div>
+      <h3 className="text-2xl font-semibold capitalize mb-4">Danger Colors</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+        {colors.danger.map((item) => (
+          <div key={item.name} className="flex flex-col gap-2">
+            <div className={`h-20 w-full rounded ${item.class}`} />
+            <span className="text-xs">danger {item.name}</span>
+          </div>
+        ))}
+      </div>
       {/* Special Colors Section */}
       <div className="space-y-4">
         <h3 className="text-2xl font-semibold">Special Utilities</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="flex flex-col gap-2">
-            <div className="h-24 w-full rounded-lg border bg-primary-error" />
-            <p className="text-sm font-medium">Primary Error</p>
-          </div>
           <div className="flex flex-col gap-2">
             <div className="h-24 w-full rounded-lg border bg-white-surface" />
             <p className="text-sm font-medium">White Surface</p>
